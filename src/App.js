@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch(`https://dev-server.gofastapi.com/getOrders`);
+        const response = await fetch(`https://alcohal-server.gofastapi.com/getOrders`);
         if (!response.ok) throw new Error(`Error: ${response.statusText}`);
         const data = await response.json();
 
@@ -69,7 +69,7 @@ const App = () => {
 
   const handleMarkAsShipped = async (orderId) => {
     try {
-      const response = await fetch(`https://dev-server.gofastapi.com/markAsShipped`, {
+      const response = await fetch(`https://alcohal-server.gofastapi.com/markAsShipped`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
